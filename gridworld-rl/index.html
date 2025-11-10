@@ -1687,7 +1687,9 @@
                 
                 // Extract policy to get optimal path length
                 const path = extractPolicy(data.Q);
-                const optimalPathLength = path.reachedGoal ? path.steps : minSteps;
+                
+                // If path doesn't reach goal or is too long, it's not converged
+                const optimalPathLength = (path.reachedGoal && path.steps < 195) ? path.steps : 999;
                 
                 // Calculate convergence with optimal path length
                 const convergenceInfo = findConvergenceEpisode(steps, optimalPathLength);
