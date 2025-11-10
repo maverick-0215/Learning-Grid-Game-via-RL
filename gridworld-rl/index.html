@@ -1209,14 +1209,12 @@
             const windowSize = 10;
             const varianceThreshold = 2; // Very low variance required
             
-            // If optimal path length is 200 or near 200, it means hitting the step limit (not converged)
-            if (optimalPathLength >= 195) {
-                const lastWindow = stepsPerEpisode.slice(-Math.min(10, stepsPerEpisode.length));
-                const avgSteps = lastWindow.reduce((a, b) => a + b, 0) / lastWindow.length;
+            // If optimal path length is unreasonably high, it's not converged
+            if (optimalPathLength >= 100) {
                 return { 
                     converged: false, 
                     episode: null, 
-                    avgSteps: Math.round(avgSteps * 10) / 10 
+                    avgSteps: 0
                 };
             }
             
@@ -1254,12 +1252,10 @@
             }
             
             // Not converged
-            const lastWindow = stepsPerEpisode.slice(-Math.min(10, stepsPerEpisode.length));
-            const avgSteps = lastWindow.reduce((a, b) => a + b, 0) / lastWindow.length;
             return { 
                 converged: false, 
                 episode: null, 
-                avgSteps: Math.round(avgSteps * 10) / 10 
+                avgSteps: 0
             };
         }
 
