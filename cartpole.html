@@ -951,9 +951,10 @@
                 const card = document.createElement('div');
                 card.className = 'stat-card';
                 card.innerHTML = `
-                    <h3>${name}</h3>
+                    <h3>${name} Algorithm</h3>
                     <div class="value">${Math.round(avg)}</div>
-                    <p style="color: #666; font-size: 0.9em;">Avg Steps (Last 100)</p>
+                    <p style="color: #666; font-size: 0.9em; margin-top: 8px;">Average Balance Duration</p>
+                    <p style="color: #999; font-size: 0.85em; margin-top: 4px;">(Last 100 Episodes)</p>
                 `;
                 statsDiv.appendChild(card);
             }
