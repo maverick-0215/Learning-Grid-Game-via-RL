@@ -1,27 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>FAI Projects — Home</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg,#f5f7fa,#dbe9f7); margin:0; }
-        .center { max-width:960px; margin: 6rem auto; text-align:center; }
-        h1 { color:#16213e; margin-bottom:6px; }
-        p.lead { color:#445; margin-bottom:32px; }
-        .cards { display:flex; gap:20px; justify-content:center; flex-wrap:wrap; }
-        .card { background:white; border-radius:8px; padding:28px; width:320px; box-shadow:0 8px 30px rgba(10,20,40,0.08); text-align:left; }
-        .card h2 { margin:0 0 10px 0; color:#0f3460; }
-        .card p { color:#444; margin-bottom:18px; }
-        .card a { display:inline-block; padding:10px 16px; background:#1a1a2e; color:white; text-decoration:none; border-radius:6px; font-weight:600; }
-        .topbar { position:sticky; top:0; background:linear-gradient(135deg,#1a1a2e,#16213e); color:white; padding:12px 20px; box-shadow:0 4px 16px rgba(0,0,0,0.12); }
-        .topbar a.brand { color:white; text-decoration:none; font-weight:700; margin-right:14px; }
-        .home-hint { color:#eef2ff; opacity:0.95; font-size:0.95rem; }
-        @media (max-width:760px){ .cards{flex-direction:column; align-items:center} .card{width:92%} }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa, #dbe9f7);
+            margin: 0;
+        }
+
+        .center {
+            max-width: 960px;
+            margin: 6rem auto;
+            text-align: center;
+        }
+
+        h1 {
+            color: #16213e;
+            margin-bottom: 6px;
+        }
+
+        p.lead {
+            color: #445;
+            margin-bottom: 32px;
+        }
+
+        .cards {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 28px;
+            width: 320px;
+            box-shadow: 0 8px 30px rgba(10, 20, 40, 0.08);
+            text-align: left;
+        }
+
+        .card h2 {
+            margin: 0 0 10px 0;
+            color: #0f3460;
+        }
+
+        .card p {
+            color: #444;
+            margin-bottom: 18px;
+        }
+
+        .card a {
+            display: inline-block;
+            padding: 10px 16px;
+            background: #1a1a2e;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+        .topbar {
+            position: sticky;
+            top: 0;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: white;
+            padding: 12px 20px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+        }
+
+        .topbar a.brand {
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            margin-right: 14px;
+        }
+
+        .home-hint {
+            color: #eef2ff;
+            opacity: 0.95;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width:760px) {
+            .cards {
+                flex-direction: column;
+                align-items: center
+            }
+
+            .card {
+                width: 92%
+            }
+        }
     </style>
-    </head>
+</head>
+
 <body>
-    <div class="topbar"><a class="brand" href="index.html">FAI Projects</a><span class="home-hint">Choose a project below</span></div>
+    <div class="topbar"><a class="brand" href="index.html">FAI Projects</a><span class="home-hint">Choose a project
+            below</span></div>
     <main class="center">
         <h1>Welcome</h1>
         <p class="lead">Select a demo to open. Each demo has a Home button in the top-left to return here.</p>
@@ -29,16 +109,26 @@
         <div class="cards">
             <div class="card">
                 <h2>Gridworld Solver</h2>
-                <p>Interactive gridworld RL simulator: setup environment, train Q-Learning/SARSA/Monte Carlo and visualize results.</p>
+                <p>Interactive gridworld RL simulator: setup environment, train Q-Learning/SARSA/Monte Carlo and
+                    visualize results.</p>
                 <a href="gridworld.html">Open Gridworld</a>
             </div>
 
             <div class="card">
                 <h2>15-Puzzle Solver</h2>
-                <p>15-Puzzle simulator with RL experiments. Scramble puzzles, train agents, and simulate learned policies.</p>
+                <p>15-Puzzle simulator with RL experiments. Scramble puzzles, train agents, and simulate learned
+                    policies.</p>
                 <a href="fifteen_puzzle.html">Open 15-Puzzle</a>
+            </div>
+
+            <div class="card">
+                <h2>CartPole Solver</h2>
+                <p>Classic CartPole balancing task. Train agents to balance a pole on a moving cart using discretized
+                    RL.</p>
+                <a href="cartpole.html">Open CartPole</a>
             </div>
         </div>
     </main>
 </body>
+
 </html>
