@@ -153,5 +153,6 @@ If convergence is not achieved, the simulator suggests increasing episodes, adju
 - N Eshwar Karthikeya (23110215)
 - O Akash (23110225)
 - M Aniruddh Reddy (23110195)
+- Chaitanya Attanti(23110052)
 
 
